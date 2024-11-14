@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 from ultralytics import YOLO
 
-my_file = open(r"D:\UPES\Sem 6\minor_proj\yolov8-silva\utils\coco.txt", "r")
+my_file = open(r"C:\Users\xaudz\proj09\Object-Detection-YOLO\yolov8-silva\utils\coco.txt", "r")
 data = my_file.read()
 class_list = data.split("\n")
 my_file.close()
@@ -14,11 +14,11 @@ for i in range(len(class_list)):
     b = random.randint(0, 255)
 
     detection_colors.append((b, g, r))
-model = YOLO(r"D:\UPES\Sem 6\minor_proj\yolov8-silva\weights\yolov8n.pt", "v8")
+model = YOLO(r"C:\Users\xaudz\proj09\Object-Detection-YOLO\yolov8-silva\weights\yolov8n.pt", "v8")
 frame_wid = 640
 frame_hyt = 480
 cap = cv2.VideoCapture(
-    r"D:\UPES\Sem 6\minor_proj\YOLO_PROJECT\Test video\TEST_VIDEO.mp4"
+    r"C:\Users\xaudz\proj09\Object-Detection-YOLO\Test video\TEST_VIDEO.mp4"
 )
 
 if not cap.isOpened():
